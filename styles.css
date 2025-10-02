@@ -1,53 +1,53 @@
-h1{
-    color: rgb(61, 89, 212);
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px 4px grey;
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid rgb(61, 89, 212);
-    border-radius: 10px;
-    background-color: rgba(61, 89, 212, 0.2);
-    box-shadow: 4px 4px 8px grey;
-}
-h2{
-    background-color: rgba(146, 146, 235, 0.603);
-    border-radius: 5px;
-    padding: 5px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    box-shadow: 3px 3px 5px grey;
-    margin: 10px;
-}
-p{
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.6;
-    margin: 10px 20px;
-    padding: 10px;
-    background-color: rgba(200, 200, 255, 0.3);
-    border-left: 4px solid rgb(61, 89, 212);
-    /* box-shadow: 2px 2px 5px grey;
-    border-radius: 5px;
-    color: #333;
-    text-align: justify;
-    text-indent: 20px; */
-}
-img{
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px grey;
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Fuentes de sistema */
+    color: #333; /* Color de texto crudo */
+    background-color: #f8f8f8; /* Fondo plano y minimalista */
+    margin: 0;
+    padding: 20px;
 }
 
-body{
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+
+h1, h2, h3 {
+    font-weight: bold; /* Tipografía audaz */
+    margin-bottom: 15px;
 }
+
+p {
+    margin-bottom: 20px; /* Bloques de texto amplios */
+}
+img {
+    border: 2px solid #333; /* Bordes duros y sin redondeo */
+    margin: 20px 0;
+    max-width: 200px;
+    height: 200PX;
+    display: block;
+}
+
+.container {
+    display: flexbox;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 2px solid #333; /* Borde para el contenedor */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 0px 0px #000; /* Sombra dura y plana */
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
 main{
     max-width: 800px;
     margin: 0 auto;
@@ -57,9 +57,9 @@ main{
     border-radius: 10px;
 }
 article{
-    margin-bottom: 20px;
-    padding: 15px;
-    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ccc; /* Líneas divisorias */
+    padding-bottom: 20px;
 }
 article:last-child{
     border-bottom: none;
@@ -76,56 +76,32 @@ footer{
 footer p{
     margin: 5px 0;
 }
-a{
-    color: rgb(61, 89, 212);
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
-::scroll-marker{
-    background-color: rgb(61, 89, 212);
-    border-radius: 5px;
-}
-::selection{
-    background-color: rgb(61, 89, 212);
-    color: white;
+a {
+    text-decoration: underline; /* Hipervínculos subrayados */
+    color: #007bff; /* Un color primario para contraste */
 }
 
-/* Estilos adicionales para mejorar la apariencia */
-header{
-    background-color: #e0e0e0;
-    padding: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
- /* header h1{
-    margin: 0;
-} */
-header h1{
-    font-size: 2.5em;
-}
-header h1{
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: 2px solid #333;
     font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 0; /* Esquinas cuadradas */
+    margin-top: 15px;
+    box-shadow: 3px 3px 0px 0px #000; /* Otra sombra dura */
+    position: relative; /* Para la sombra adicional en botones */
 }
-header h1{
-    letter-spacing: 2px;
-}
-header h1{
-    text-transform: uppercase;
-}
-header h1{
-    color: rgb(61, 89, 212);
-}
-header h1{
-    text-shadow: 2px 2px 4px grey;
-} */
-header h1{
-    border-bottom: 2px solid rgb(61, 89, 212);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-/* Fin de los estilos adicionales */
-html {
-    scroll-behavior: smooth;
+
+button:after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    top: 6px;
+    left: 6px;
+    right: -6px;
+    bottom: -6px;
+    z-index: -1;
 }
